@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
 
     // 3.行列布局
     return MaterialApp(
-      home: RowDemo(),
+      home: RowDemoNestingWidgets(),
     );
   }
 
