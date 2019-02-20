@@ -182,7 +182,15 @@ class RowDemoNestingWidgets extends StatelessWidget {
         children: <Widget>[
           Container(
             padding: EdgeInsets.all(20.0),
-            child: Text('Strawberry Pavlova'),
+            child: Text(
+              'Strawberry Pavlova',
+              style: TextStyle(
+                  color: Colors.black,
+                  fontWeight: FontWeight.w800,
+                  fontFamily: 'Roboto',
+                  letterSpacing: 0.5,
+                  fontSize: 20.0),
+            ),
           ),
           Container(
             padding: EdgeInsets.all(20.0),
@@ -196,23 +204,28 @@ class RowDemoNestingWidgets extends StatelessWidget {
     );
 
     return Scaffold(
-      body:Center(
-        child: Container(
-          margin: EdgeInsets.fromLTRB(0, 40, 0, 30),
-          height: 600.0,
-          child: Card(
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Container(
-                  width: 400.0,
-                  child: leftColum,
-                ),
-                Expanded(child: Image.asset('images/meinv1.jpg'),)
-                
-              ],
-            ),
+        body: Center(
+      child: Container(
+        margin: EdgeInsets.fromLTRB(0, 40, 0, 30),
+        // height: 600.0,
+        child: Card(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: <Widget>[
+              Container(
+                width: 350.0,
+                color: Colors.greenAccent[100],
+                // height: 400.0,
+                child: leftColum,
+              ),
+              Expanded(
+                child: Image.asset('images/meinv1.jpg'),
+              )
+            ],
           ),
-        ),));
+        ),
+      ),
+    ));
   }
 }
