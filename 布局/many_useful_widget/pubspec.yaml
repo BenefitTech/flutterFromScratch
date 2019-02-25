@@ -40,6 +40,9 @@ flutter:
         - images/meinv1.jpg
         - images/meinv2.jpg
         - images/meinv3.jpg
+        - images/meinv4.jpg
+        - images/meinv5.jpg
+        - images/meinv6.jpg
     # An image asset can refer to one or more resolution-specific "variants", see
     # https://flutter.io/assets-and-images/#resolution-aware.
     # For details regarding adding assets from package dependencies, see

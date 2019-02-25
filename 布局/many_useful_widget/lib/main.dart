@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
 import 'container.dart';
+import 'grid_view.dart';
+import 'list_view.dart';
+import 'stack.dart';
+import 'card.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,7 +25,11 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: ContainerTest(),
+      // home: ContainerTest(),
+      // home: GridViewDemo(),
+      // home: ListViewDemo(),
+      // home: StackDemo(),
+      home: CardDemo(),
     );
   }
 }
