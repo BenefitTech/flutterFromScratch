@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'favorite_widget.dart';
+
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -9,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        
+
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(),
@@ -43,11 +45,7 @@ class MyHomePage extends StatelessWidget{
               ],
             ),
           ),
-          Icon(
-            Icons.star,
-            color: Colors.red[500],
-          ),
-          Text('41'),
+          FavoriteWidget(),
         ],
       ),
     );
