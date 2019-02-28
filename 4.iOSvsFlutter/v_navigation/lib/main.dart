@@ -45,10 +45,18 @@ class _HomePageState extends State<HomePage> {
             // 通过路由名字跳转新路由
             // Navigator.of(context).pushNamed('/green');
             // 直接创建路由并跳转
-            Navigator.push(context, MaterialPageRoute(builder: (context) => GreenPage()));
+            _navigateToGreenPage(context);
           },
         ),
       ),
     );
+  }
+
+  void _navigateToGreenPage(BuildContext context) async {
+    final result = await Navigator.push(
+        context, MaterialPageRoute(builder: (context) => GreenPage()));
+    Scaffold.of(context).showSnackBar(SnackBar(
+      content: Text('$result'),
+    ));
   }
 }
