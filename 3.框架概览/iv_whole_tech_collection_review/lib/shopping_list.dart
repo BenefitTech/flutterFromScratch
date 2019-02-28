@@ -62,4 +62,15 @@ ShoppingList类继承自StatefulWidget，这意味着这个widget可以存储状
 通过以这种方式管理状态，您不需要编写用于创建和更新子widget的单独代码。相反，您只需实现可以处理这两种情况的build函数。
 
 
+4.state 生命周期监听
+在StatefulWidget调用createState之后，框架将新的状态对象插入树中，然后调用状态对象的initState。 
+子类化State可以重写initState，以完成仅需要执行一次的工作。 
+例如，您可以重写initState以配置动画或订阅platform services。initState的实现中需要调用super.initState。
+
+当一个状态对象不再需要时，框架调用状态对象的dispose。 
+您可以覆盖该dispose方法来执行清理工作。例如，您可以覆盖dispose取消定时器或取消订阅platform services。 
+dispose典型的实现是直接调用super.dispose。
+
+
+
  */
