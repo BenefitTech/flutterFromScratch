@@ -1,8 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart' show rootBundle;
+
+import 'json_load.dart';
+import 'image_load.dart';
+import 'font-load.dart';
 
 void main() => runApp(MyApp());
 
+/*
+一个应用程序少不了一些静态资源，例如：图片、字体、配置文件等。
+这些静态资源会打包到程序安装包中，可以在运行时访问。
+
+asset 的声明顺序是无关紧要的。
+在构建期间，Flutter 将 asset 放置到称为 asset bundle 的特殊存档中，应用程序可以在运行时通过 AssetBundle 对象访问。
+ */
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -21,32 +31,17 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Container(
-        margin: EdgeInsets.only(top: 100),
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              RaisedButton(
-                child: Text('加载json'),
-                onPressed: () {
-                  var json = loadAsset();
-                  print(json.toString());
-                },
-              ),
-              Container(
-                width: 200,
-                height: 150,
-                child: Image.network(
-                    'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1551528027807&di=dee14ff3efbe38fd78a731ec2af1213b&imgtype=0&src=http%3A%2F%2Fpic29.nipic.com%2F20130531%2F8786105_102319220000_2.jpg'),
-              )
-            ],
-          ),
-        ),
+      appBar: AppBar(
+        title: Text('本地数据读取'),
+      ),
+      // body: JSONLoadView(),
+      body: Column(
+        children: <Widget>[
+          ImageLoadView(),
+          FontsLoadView()
+          
+        ],
       ),
     );
-  }
-
-  Future<String> loadAsset() async {
-    return await rootBundle.loadString('my-assets/data.json');
   }
 }
