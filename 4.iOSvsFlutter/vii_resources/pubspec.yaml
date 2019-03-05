@@ -23,6 +23,8 @@ dependencies:
     # The following adds the Cupertino Icons font to your application.
     # Use with the CupertinoIcons class for iOS style icons.
     cupertino_icons: ^0.1.2
+    transparent_image: ^0.1.0
+    cached_network_image: ^0.6.2
 
 dev_dependencies:
     flutter_test:
@@ -55,14 +57,13 @@ flutter:
     # list giving the asset and other descriptors for the font. For
     # example:
     fonts:
-      - family: Charmonman
-        fonts:
-          - asset: my-assets/fonts/Charmonman-Regular.ttf
-        #   - asset: fonts/Schyler-Italic.ttf
-            weight: 500
+        - family: Charmonman
+          fonts:
+              - asset: my-assets/fonts/Charmonman-Regular.ttf
+                #   - asset: fonts/Schyler-Italic.ttf
+                weight: 500
+                # style: italic
 
-            # style: italic
-  
     #   - family: Trajan Pro
     #     fonts:
     #       - asset: fonts/TrajanPro.ttf
