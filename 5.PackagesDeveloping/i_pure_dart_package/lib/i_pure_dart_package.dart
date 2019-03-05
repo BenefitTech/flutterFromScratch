@@ -11,6 +11,11 @@ Step 1: 开发Dart包
     Package的Dart代码
   test/hello_test.dart:
     Package的单元测试代码.
+
+Step 2: 实现package
+对于纯Dart包，只需在主lib/<package name>.dart文件内或lib目录中的文件中添加功能 。
+要测试软件包，请在test目录中添加unit tests。
+有关如何组织包内容的更多详细信息，请参阅Dart library package文档。
  */
 
 /// A Calculator.
