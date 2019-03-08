@@ -3,6 +3,7 @@ import 'dart:io';
 import 'dart:convert';
 
 import 'isolate_async_await.dart';
+import 'http_package_json_model_usage.dart';
 
 /**
  * 
@@ -27,8 +28,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SampleAppPage(),
+      // home: SampleAppPage(),
       // home: IsolateTestPage(),
+      home: DataToJSONModelPage(),
     );
   }
 }

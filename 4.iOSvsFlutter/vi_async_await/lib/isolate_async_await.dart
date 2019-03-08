@@ -78,7 +78,7 @@ class _IsolateTestPageState extends State<IsolateTestPage> {
 
     // Notify any other isolates what port this isolate listens to.
     sendPort.send(port.sendPort);
-
+  
     await for (var msg in port) {
       String data = msg[0];
       SendPort replyTo = msg[1];
