@@ -4,7 +4,7 @@ import 'dart:convert';
 
 import 'isolate_async_await.dart';
 import 'http_package_json_model_usage.dart';
-
+import 'websockets.dart';
 /**
  * 
  * 首先补充一些语法,关于const final static
@@ -30,7 +30,8 @@ class MyApp extends StatelessWidget {
       ),
       // home: SampleAppPage(),
       // home: IsolateTestPage(),
-      home: DataToJSONModelPage(),
+      // home: DataToJSONModelPage(),
+      home: SocketPage(),
     );
   }
 }
@@ -59,19 +60,18 @@ class _SampleAppPageState extends State<SampleAppPage> {
     loadData();
   }
 
-  // 添加loadingView 
-  getBody(){
+  // 添加loadingView
+  getBody() {
     if (widgets.length == 0) {
       return Center(child: CircularProgressIndicator());
     }
     return ListView.builder(
       itemCount: widgets.length,
-      itemBuilder: (BuildContext context,int position){
+      itemBuilder: (BuildContext context, int position) {
         return getRow(position);
       },
     );
   }
-
 
   @override
   Widget build(BuildContext context) {
