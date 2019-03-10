@@ -5,6 +5,8 @@ import 'dart:convert';
 import 'isolate_async_await.dart';
 import 'http_package_json_model_usage.dart';
 import 'websockets.dart';
+
+import 'dio_usage.dart';
 /**
  * 
  * 首先补充一些语法,关于const final static
@@ -31,7 +33,8 @@ class MyApp extends StatelessWidget {
       // home: SampleAppPage(),
       // home: IsolateTestPage(),
       // home: DataToJSONModelPage(),
-      home: SocketPage(),
+      // home: SocketPage(),
+      home: DioPage(),
     );
   }
 }
